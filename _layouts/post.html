@@ -1,0 +1,14 @@
+{% include head.html %}
+    
+    <h2>{{page.title}}</h2>
+    <div class="content">
+        {{content}}
+    </div>
+
+    {{ page.img }}<br />
+    <img src="{{page.img}}">
+    {% for categorie in site.categories %}
+        <a href="/categories/{{ categorie[0] }}">{{ categorie[0] }}</a>
+    {% endfor %}
+
+{% include footer.html %}
